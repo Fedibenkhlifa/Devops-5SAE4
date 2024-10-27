@@ -1,6 +1,5 @@
 package tn.esprit.tpfoyer.service;
 
-
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.tpfoyer.entity.Etudiant;
@@ -11,7 +10,6 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class EtudiantServiceImpl implements IEtudiantService {
-
 
     EtudiantRepository etudiantRepository;
 
@@ -30,11 +28,8 @@ public class EtudiantServiceImpl implements IEtudiantService {
     public void removeEtudiant(Long etudiantId) {
         etudiantRepository.deleteById(etudiantId);
     }
-    public Etudiant recupererEtudiantParCin(long cin)
-    {
+    public Etudiant recupererEtudiantParCin(long cin) {
         return etudiantRepository.findEtudiantByCinEtudiant(cin);
     }
-
-
-
 }
+
